@@ -1,0 +1,75 @@
+.main_container {
+  width: 100%;
+  max-width: 1350px;
+}
+
+.main_container > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.main_container li {
+  flex-basis: 30%;
+}
+
+.main_container > h1 {
+  color: white;
+  margin: 40px 0;
+}
+
+.profile-container {
+  color: white;
+  background-color: #202020;
+  padding: 1rem;
+  border-radius: 12px;
+  position: relative;
+}
+
+.profile-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  padding-left: 4rem;
+  margin-bottom: 2rem;
+}
+
+.profile-container li {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-basis: 25%;
+}
+
+.company-figure {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.similar_card {
+  background-color: #202020;
+  color: white;
+  padding: 1rem;
+  border-radius: 13px;
+}
+
+.similar_area {
+  display: flex;
+  gap: 20px;
+}
+
+.similar_area > div {
+  display: flex;
+  gap: 8px;
+  margin: 1rem 0;
+}
+
+.link_site {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  right: 16px;
+  top: 196px;
+  cursor: pointer;
+}
