@@ -1,9 +1,9 @@
 import {Redirect, Route} from 'react-router-dom'
-import Cookies from 'js-cookie'
+import Cookie from 'js-cookie'
 
-function CommonRoute(props) {
-  const jwt = Cookies.get('JWT')
-  if (!jwt) {
+const CommonRoute = props => {
+  const token = Cookie.get('jwt_token')
+  if (token === undefined) {
     return <Redirect to="/login" />
   }
   return <Route {...props} />

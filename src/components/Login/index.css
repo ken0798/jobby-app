@@ -1,71 +1,70 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: 'Roboto';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: black;
-}
-
-.main__home {
-  min-height: 100vh;
-  width: 100%;
+.login-container {
+  background-color: #000000;
+  height: 100vh;
+  padding-top: 30px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-form {
-  background-color: #202020;
-  border-radius: 1rem;
-  width: 600px;
-  height: 600px;
+.login-form-container {
+  background-color: #272727;
+  border-radius: 10px;
+  padding: 40px;
+  width: 40%;
+}
+
+.form-logo-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 1rem;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
 }
 
-form *:not(img) {
-  width: 100%;
+.form-label {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: 'Roboto';
 }
 
-input,
-button {
-  border-radius: 0.5rem;
-  height: 2.8rem;
-  cursor: pointer;
-  color: #fff;
-}
-
-label {
-  color: #fff;
-  font-size: 1rem;
-  text-transform: uppercase;
-}
-
-input {
-  background-color: transparent;
+.form-input {
+  border-radius: 5px;
   border: 1px solid #7e858e;
-  margin-top: 0.5rem;
-  padding-left: 1rem;
-}
-
-input:focus {
-  outline: none;
-}
-
-button {
-  background-color: #6366f1;
-  font-size: 1rem;
-  border: none;
-}
-
-.error {
-  color: #ff0b37;
+  color: #ffffff;
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  margin-top: 5px;
   font-size: 15px;
+}
+
+.form-submit-button {
+  color: #ffffff;
+  background-color: #6366f1;
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Roboto';
+  padding: 5px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.error-message {
+  color: #ff0b37;
+  font-family: 'Roboto';
+}
+
+@media screen and (max-width: 767px) {
+  .login-container {
+    padding: 15px;
+  }
+
+  .login-form-container {
+    width: 100%;
+  }
 }

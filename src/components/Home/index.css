@@ -1,76 +1,53 @@
-.home__container {
-  width: 100%;
-  background-color: black;
-}
-
-.home__layer {
-  width: 100%;
-  padding: 1rem;
-  background-color: #202020;
-  display: flex;
-  justify-content: center;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1350px;
-}
-
-header img {
-  width: 180px;
-  height: 50px;
-}
-
-header ul {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-}
-
-ul li,
-.list {
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.header__btn {
-  width: 100px;
-}
-
-header h1 {
-  font-size: 40px;
-  color: white;
-  text-transform: capitalize;
-}
-
-.sec_info {
-  display: flex;
-  width: 100%;
-  padding: 0 16px;
-  justify-content: center;
-  color: white;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
+.home-container {
+  padding: 40px;
   background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
+  height: 100vh;
+  background-size: cover;
 }
 
-.content__info {
-  margin-top: 20vh;
-  width: 100%;
-  max-width: 1350px;
+.home-heading {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 50px;
 }
 
-.content__info h1 {
-  font-size: 60px;
-  text-transform: capitalize;
+.home-paragraph {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 25px;
+  width: 50%;
 }
 
-.content__info p {
-  max-width: 800px;
-  font-size: 20px;
+.home-jobs-button {
+  color: #ffffff;
+  background-color: #6366f1;
+  border: 0;
+  border-radius: 5px;
+  width: 100px;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: 'Roboto';
+  padding: 5px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.retry-btn-link {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+  .home-container {
+    padding: 15px;
+    flex-grow: 1;
+  }
+
+  .home-heading {
+    font-size: 25px;
+  }
+
+  .home-paragraph {
+    font-size: 20px;
+    width: 100%;
+  }
 }

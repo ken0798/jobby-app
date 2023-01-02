@@ -1,71 +1,37 @@
-import {Link} from 'react-router-dom'
-import Cookies from 'js-cookie'
+// eslint-disable-next-line no-unused-vars
+import {Link, Redirect} from 'react-router-dom'
+import Header from '../Header'
 import './index.css'
 
-function Home(props) {
-  const {history} = props
+const Home = props => {
+  const onRedirectToJobs = () => {
+    const {history} = props
+    history.replace('/jobs')
+  }
+
   return (
     <>
-      <div className="home__container">
-        <Header props={props} />
-        <Content history={history} />
+      <Header />
+      <div className="home-container">
+        <h1 className="home-heading">
+          Find The Job That <br />
+          Fits Your Life
+        </h1>
+        <p className="home-paragraph">
+          Millions of people are searching for jobs, salary information, company
+          reviews. Find the job that fits your abilities and potential.
+        </p>
+        <Link className="retry-btn-link" to="/jobs">
+          <button
+            className="home-jobs-button"
+            type="button"
+            onClick={onRedirectToJobs}
+          >
+            Find Jobs
+          </button>
+        </Link>
       </div>
     </>
-  )
-}
-
-export function Header({props}) {
-  return (
-    <div className="home__layer">
-      <header>
-        <img
-          style={{cursor: 'pointer'}}
-          src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
-          alt="/"
-          onClick={() => props.history.push('/')}
-        />
-        <ul>
-          <Link className="list" to="/">
-            <li>Home</li>
-          </Link>
-          <Link className="list" to="/jobs">
-            <li>Jobs</li>
-          </Link>
-        </ul>
-        <button
-          onClick={() => {
-            Cookies.remove('JWT')
-            props.history.push('/login')
-          }}
-          className="header__btn"
-          type="button"
-        >
-          Logout
-        </button>
-      </header>
-    </div>
-  )
-}
-
-function Content({history}) {
-  return (
-    <div className="sec_info">
-      <section className="content__info">
-        <h1>Find The Job That Fits Your Life</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla
-          facilisi etiam dignissim diam quis enim lobortis scelerisque.
-        </p>
-        <button
-          onClick={() => history.push('/jobs')}
-          className="header__btn"
-          type="button"
-        >
-          Find Jobs
-        </button>
-      </section>
-    </div>
   )
 }
 
